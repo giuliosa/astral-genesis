@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpui2col3fpud"]
+
+[ext_resource type="Script" path="res://Scenes/Actors/Player/player.gd" id="1_7fj6v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_86euk"]
+radius = 4.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_7fj6v")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-0.818182, -1.33333)
+scale = Vector2(1.63636, 1.66667)
+color = Color(0.168627, 0.439216, 0.839216, 1)
+polygon = PackedVector2Array(-5, -7, 0.441179, -7, 6, -7, 6, -2.49073, 6, 2, -5, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_86euk")
