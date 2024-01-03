@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpui2col3fpud"]
+[gd_scene load_steps=4 format=3 uid="uid://bpui2col3fpud"]
 
 [ext_resource type="Script" path="res://Scenes/Actors/Player/player.gd" id="1_7fj6v"]
+[ext_resource type="Texture2D" uid="uid://devrnoda34srr" path="res://Scenes/Actors/Player/SpriteSheet.png" id="2_qb8wd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_86euk"]
 radius = 4.0
@@ -9,12 +10,14 @@ height = 22.0
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7fj6v")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Polygon2D" type="Sprite2D" parent="."]
 position = Vector2(-0.818182, -1.33333)
 scale = Vector2(1.63636, 1.66667)
-color = Color(0.168627, 0.439216, 0.839216, 1)
-polygon = PackedVector2Array(-5, -7, 0.441179, -7, 6, -7, 6, -2.49073, 6, 2, -5, 2)
+texture = ExtResource("2_qb8wd")
+hframes = 4
+vframes = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_86euk")
