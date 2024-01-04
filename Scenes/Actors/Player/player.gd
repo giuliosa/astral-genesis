@@ -23,9 +23,16 @@ func update_animation_parameters():
 	else:
 		animation_tree["parameters/conditions/idle"] = false
 		animation_tree["parameters/conditions/is_walking"] = true
+		
+	if Input.is_action_just_pressed("light_attack"):
+		animation_tree["parameters/conditions/attack"] = true
+	else:
+		animation_tree["parameters/conditions/attack"] = false
+		
 	if direction != Vector2.ZERO:
 		animation_tree["parameters/Idle/blend_position"] = direction
 		animation_tree["parameters/Walk/blend_position"] = direction
+		animation_tree["parameters/Attack/blend_position"] = direction
 	
 
 
