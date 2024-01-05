@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnei3sll50re4"]
 
-[ext_resource type="Script" path="res://Scenes/World/room.gd" id="1_lt02h"]
+[ext_resource type="Script" path="res://Scenes/World/Dungeon creator/room.gd" id="1_lt02h"]
 
 [node name="Room" type="Node"]
 script = ExtResource("1_lt02h")

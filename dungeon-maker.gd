@@ -3,8 +3,10 @@ extends Node
 
 func _ready():
 	print("Inicializando dungeon")
-	var new_stair = preload("res://Scenes/World/Stairs.gd").new()
+	var new_stair = preload("res://Scenes/World/stairs.tscn").instantiate()
 	new_stair.doors = 1
-	new_stair.createCorridor(randi() % 6 + 1)
+	new_stair.floor = 0
+	print("Andar:", new_stair.floor)
+	new_stair.create_corridor()
 	add_child(new_stair)
 	
