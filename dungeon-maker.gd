@@ -3,7 +3,7 @@ extends Node
 
 func _ready():
 	print("Inicializando dungeon")
-	var new_stair = preload("res://Scenes/World/stairs.tscn").instantiate()
+	var new_stair = preload("res://Scenes/World/Dungeon creator/stairs.tscn").instantiate()
 	new_stair.doors = 1
 	new_stair.floor = 0
 	print("Andar:", new_stair.floor)

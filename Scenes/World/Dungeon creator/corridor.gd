@@ -14,8 +14,8 @@ enum RoomType {
 }
 
 func create_room_or_stair(id: int, floor: int):
-	var new_room = preload("res://Scenes/World/room.tscn").instantiate()
-	var new_stair = preload("res://Scenes/World/stairs.tscn").instantiate()
+	var new_room = preload("res://Scenes/World/Dungeon creator/room.tscn").instantiate()
+	var new_stair = preload("res://Scenes/World/Dungeon creator/stairs.tscn").instantiate()
 	
 	match randi() % 6 + 1:
 		1:

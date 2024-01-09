@@ -15,7 +15,7 @@ enum RoomType {
 }
 
 func create_corridor():
-	var new_corridor = preload("res://Scenes/World/corridor.tscn").instantiate()
+	var new_corridor = preload("res://Scenes/World/Dungeon creator/corridor.tscn").instantiate()
 	new_corridor.door_id = 1
 	match randi() % 6 + 1:
 		1:
