@@ -580,3 +580,5 @@ parameters/conditions/is_walking = false
 parameters/Attack/blend_position = Vector2(-0.004008, 0)
 parameters/Idle/blend_position = Vector2(-0.00270635, 0.00502276)
 parameters/Walk/blend_position = Vector2(0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]

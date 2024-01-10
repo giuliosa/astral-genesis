@@ -1,15 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bycppogqwvvvi"]
+[gd_scene load_steps=7 format=3 uid="uid://bycppogqwvvvi"]
 
 [ext_resource type="PackedScene" uid="uid://dpe0m4bbrg1v7" path="res://Scenes/World/ArchitecturalPrefab/stair_01.tscn" id="1_5ox0n"]
 [ext_resource type="PackedScene" uid="uid://bpui2col3fpud" path="res://Scenes/Actors/Player/player.tscn" id="1_n68ou"]
 [ext_resource type="PackedScene" uid="uid://cjlwoouadusja" path="res://Scenes/World/ArchitecturalPrefab/corridor_01.tscn" id="3_q2yna"]
+[ext_resource type="PackedScene" uid="uid://dwxr8dtlhgy8s" path="res://Scenes/World/ArchitecturalPrefab/room_01.tscn" id="4_e704k"]
+[ext_resource type="PackedScene" uid="uid://s0kvc5gg87b5" path="res://Scenes/World/ArchitecturalPrefab/room_03.tscn" id="5_7sxhc"]
+[ext_resource type="PackedScene" uid="uid://dqmi6ueavnxih" path="res://Scenes/World/ArchitecturalPrefab/room_02.tscn" id="5_33byc"]
 
 [node name="Test-world" type="Node2D"]
 
 [node name="Stair_01" parent="." instance=ExtResource("1_5ox0n")]
 
-[node name="Player" parent="." instance=ExtResource("1_n68ou")]
-position = Vector2(224, 149)
-
 [node name="Corridor_01" parent="." instance=ExtResource("3_q2yna")]
 position = Vector2(0, -271)
+
+[node name="Room_01" parent="." instance=ExtResource("4_e704k")]
+position = Vector2(0, -543)
+
+[node name="Room_02" parent="." instance=ExtResource("5_33byc")]
+position = Vector2(-480, -543)
+
+[node name="Room_03" parent="." instance=ExtResource("5_7sxhc")]
+position = Vector2(-480, -271)
+
+[node name="Player" parent="." instance=ExtResource("1_n68ou")]
+position = Vector2(240, 135)
