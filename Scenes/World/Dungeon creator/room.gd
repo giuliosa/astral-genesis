@@ -1,48 +1,59 @@
 class_name Room
 extends Node
 
-var doors: int
-var door_id: int
-var room_type: RoomType
+var room_doors: int
+var rooms = []
 
-enum RoomType {
-	SMALL,
-	MEDIUM,
-	ALLOGATED,
-	BIG,
-	STAIRS
-}
+func create_room_doors(doors: int, deep: int):
+	room_doors = doors
+	if deep > 0:
+		deep -= 1
+		for i in range(room_doors):	
+			match randi() % 5 + 1:
+				1:
+					print("hub")
+					create_hub_instance(deep)
+				2:			
+					print("room")
+					create_room_instance(deep)
+				3:			
+					print("room")
+					create_room_instance(deep)
+				4:
+					print("room")
+					create_room_instance(deep)
+				5:
+					print("special")
+					create_special_room_instance()
+	else:
+		print("final room froom room")
+	#if new_room.room_type:
+		#new_room.door_id = id
+		#add_child(new_room)
+	#elif new_corridor.room_type:
+		#new_corridor.door_id = id
+		#add_child(new_corridor)
+		#new_corridor.create_room_or_stair(id)
 
-func create_room_or_stair(id: int, floor: int):
+func create_hub_instance(deep: int):
+	var new_hub = preload("res://Scenes/World/Dungeon creator/Hub.tscn").instantiate()
+	new_hub.create_hub_doors(randi() % 3 + 1, deep)
+	rooms.append(new_hub)
+	add_child(new_hub)
+
+func create_room_instance(deep: int):
 	var new_room = preload("res://Scenes/World/Dungeon creator/room.tscn").instantiate()
-	var new_stair = preload("res://Scenes/World/Dungeon creator/stairs.tscn").instantiate()
+	new_room.create_room_doors(randi() % 3 + 1, deep)
+	rooms.append(new_room)
+	add_child(new_room)
 	
-	match randi() % 6 + 1:
-		1:
-			new_room.doors = 0
-			new_room.room_type = RoomType.SMALL
-		2:
-			new_room.doors = 0
-			new_room.room_type = RoomType.MEDIUM
-		3:
-			new_room.doors = 0
-			new_room.room_type = RoomType.MEDIUM
-		4:
-			new_room.doors = 0
-			new_room.room_type = RoomType.ALLOGATED
-		5:
-			new_room.doors = 0
-			new_room.room_type = RoomType.BIG
-		6:
-			new_stair.doors = 1
-			new_stair.room_type = RoomType.STAIRS
-			
-	if new_room.room_type:
-		new_room.door_id = id
-		add_child(new_room)
-	elif new_stair.room_type:
-		new_stair.door_id = id
-		new_stair.floor = floor +1
-		print("Andar:", new_stair.floor)
-		add_child(new_stair)
-		new_stair.create_corridor()
+func create_special_room_instance():
+	var new_room = preload("res://Scenes/World/Dungeon creator/special_room.tscn").instantiate()
+	new_room.create_special_room()
+	rooms.append(new_room)
+	add_child(new_room)
+
+func create_final_room_instance():
+	var new_room = preload("res://Scenes/World/Dungeon creator/special_room.tscn").instantiate()
+	rooms.append(new_room)
+	add_child(new_room)

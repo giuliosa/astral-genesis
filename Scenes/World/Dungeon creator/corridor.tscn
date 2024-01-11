@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ql8gsjw7n0dc"]
-
-[ext_resource type="Script" path="res://Scenes/World/Dungeon creator/corridor.gd" id="1_157fw"]
-
-[node name="Corridor" type="Node"]
-script = ExtResource("1_157fw")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://di3dcgunagxcn"]
 
-[ext_resource type="Texture2D" uid="uid://bdale8p8px150" path="res://Scenes/World/Tilesets/Interior/TilesetInteriorFloor.png" id="1_lpyeq"]
-[ext_resource type="Texture2D" uid="uid://bpo05drg3vosv" path="res://Scenes/World/Tilesets/Interior/TilesetWallSimple.png" id="2_klj1n"]
+[ext_resource type="Texture2D" uid="uid://bdale8p8px150" path="res://Scenes/World/Tilesets/Interior/TilesetInteriorFloor.png" id="1_cxpbd"]
+[ext_resource type="Texture2D" uid="uid://bpo05drg3vosv" path="res://Scenes/World/Tilesets/Interior/TilesetWallSimple.png" id="2_3flmp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_svkuh"]
-texture = ExtResource("1_lpyeq")
+texture = ExtResource("1_cxpbd")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1084,7 +1084,7 @@ texture = ExtResource("1_lpyeq")
 19:16/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v13s4"]
-texture = ExtResource("2_klj1n")
+texture = ExtResource("2_3flmp")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0

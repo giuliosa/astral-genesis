@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbg6tcpgexj87"]
+
+[ext_resource type="Script" path="res://Scenes/World/Dungeon creator/Hub.gd" id="1_mela3"]
+
+[node name="Hub" type="Node"]
+script = ExtResource("1_mela3")

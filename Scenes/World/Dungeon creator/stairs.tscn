@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbg6tcpgexj87"]
-
-[ext_resource type="Script" path="res://Scenes/World/Dungeon creator/Stairs.gd" id="1_wfhop"]
-
-[node name="Stairs" type="Node"]
-script = ExtResource("1_wfhop")
