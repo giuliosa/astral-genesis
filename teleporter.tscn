@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbet3qc7a44x"]
+
+[ext_resource type="Script" path="res://teleporter.gd" id="1_iuf24"]
+[ext_resource type="PackedScene" uid="uid://cier21ag58pp5" path="res://transition.tscn" id="2_pjir1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bav38"]
+size = Vector2(14, 11)
+
+[node name="Teleporter" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_iuf24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(248, 105.5)
+shape = SubResource("RectangleShape2D_bav38")
+
+[node name="Transition" parent="." instance=ExtResource("2_pjir1")]
+unique_name_in_owner = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
